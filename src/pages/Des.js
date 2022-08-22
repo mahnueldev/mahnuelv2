@@ -1,11 +1,11 @@
 import React from 'react'
-import OrangeFile from '../components/comp/OrangeFile'
+import OrangeFile from '../svg/OrangeFile'
 import styled from 'styled-components'
 import Htext from '../components/comp/Htext'
 import Ptext from '../components/comp/Ptext'
 import DesProjects from '../components/layouts/DesProjects'
 
-const DesStyle = styled.div`
+const DesStyle = styled.section`
 display: flex;
 flex-direction: column;
 justify-content: center;

@@ -1,11 +1,11 @@
 import React from 'react'
-import BlueFile from '../components/comp/BlueFile'
+import BlueFile from '../svg/BlueFile'
 import styled from 'styled-components'
 import Htext from '../components/comp/Htext'
 import Ptext from '../components/comp/Ptext'
 import DevProjects from '../components/layouts/DevProjects'
 
-const DevStyle = styled.div`
+const DevStyle = styled.section`
 display: flex;
 flex-direction: column;
 justify-content: center;

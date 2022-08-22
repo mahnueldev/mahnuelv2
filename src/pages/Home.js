@@ -7,8 +7,9 @@ import Meetrix from '../images/meetrix.png';
 import Ptext from '../components/comp/Ptext';
 import BottomBar from '../components/layouts/BottomBar';
 import {MdWavingHand} from 'react-icons/md'
+import { Link } from 'react-router-dom';
 
-const HomeStyle = styled.div`
+const HomeStyle = styled.section`
   display: flex;
   .substyle {
     display: flex;
@@ -73,7 +74,9 @@ numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium'
             />
           </div>
           <br />
+          <Link to='/about'>
           <MainButton type='type' value='About' colorname='blackbtn' icon= {<MdWavingHand /> } />
+          </Link>
         </div>
         <div className='right-sec'>
           <img src={Meetrix} alt='' />

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { IoIosArrowUp } from 'react-icons/io';
-import AnimBlueFile from '../comp/AnimBlueFile';
-import AnimOrangeFile from '../comp/AnimOrangeFile';
+import AnimBlueFile from '../../svg/AnimBlueFile';
+import AnimOrangeFile from '../../svg/AnimOrangeFile';
 import { Link } from 'react-router-dom';
 // import Loadmation from '../animation/Loadmation';
 
