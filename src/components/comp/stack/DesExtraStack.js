@@ -1,15 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import { DiNodejsSmall,DiMysql, DiGithubAlt, DiLinux } from 'react-icons/di';
-import { SiMongodb } from 'react-icons/si';
+import { SiAdobecreativecloud } from 'react-icons/si';
+import { BsBehance } from 'react-icons/bs';
 
-
-const DevExtraStackStyle = styled.section`
+const DesExtraStackStyle = styled.section`
   width: 29rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
- 
+  @media only screen and (max-width: 768px) {
+    width: 23rem;
+  }
   #stack-slider {
     display: flex;
     flex-direction: row;
@@ -53,7 +54,7 @@ const DevExtraStackStyle = styled.section`
     -ms-user-select: none;
     user-select: none;
   }
-  #stack-slider  #divname::before {
+  #stack-slider #divname::before {
     content: '';
     /* position: absolute; */
     /* left: 50%; */
@@ -97,7 +98,8 @@ const DevExtraStackStyle = styled.section`
     width: 8rem;
     opacity: 1;
   }
-  #stack-slider input:checked + label,#divname::after {
+  #stack-slider input:checked + label,
+  #divname::after {
     border-width: 1px;
     transform: scale(1.2);
     transition: 0.5s;
@@ -126,7 +128,7 @@ const DevExtraStackStyle = styled.section`
     top: 50%;
     width: 22px;
     height: 22px;
-    background: var(--brand1);
+    background: var(--brand2);
     border-radius: 50%;
     transition: all 0.15s ease-in-out;
     transform: translate(-50%, -50%);
@@ -150,54 +152,43 @@ const DevExtraStackStyle = styled.section`
     align-items: center;
     width: 2rem;
     margin-left: 2rem;
-    
   }
 `;
-const DevExtraStack = () => {
+const DesExtraStack = () => {
   return (
-    <DevExtraStackStyle>
+    <DesExtraStackStyle>
       <div id='stack-slider'>
-        <input type='radio' name='stack-name' id='6' value='6' />
-        <label htmlFor='6'>
+        <input type='radio' name='stack-name' id='6b' value='6b' />
+        <label htmlFor='6b'>
+          <div id='divname'></div>
+        </label>
+        <input type='radio' name='stack-name' id='7b' value='7b' />
+        <label htmlFor='7b'>
           <div id='divname'>
-            <DiNodejsSmall className='iconStyles'/>
-            <p>NodeJS</p>
+            <SiAdobecreativecloud className='iconStyles' />
+            <p>CreativeCloud</p>
           </div>
         </label>
-        <input type='radio' name='stack-name' id='7' value='7' />
-        <label htmlFor='7'>
+        <input type='radio' name='stack-name' id='8b' value='8b' />
+        <label htmlFor='8b'>
+          <div id='divname'></div>
+        </label>
+        <input type='radio' name='stack-name' id='9b' value='9b' />
+        <label htmlFor='9b'>
           <div id='divname'>
-            <DiMysql className='iconStyles'/>
-            <p>Mysql</p>
+            <BsBehance className='iconStyles' />
+            <p>Behance</p>
           </div>
         </label>
-        <input type='radio' name='stack-name' id='8' value='8' />
-        <label htmlFor='8'>
-          <div id='divname'>
-            <SiMongodb className='iconStyles'/>
-            <p>Mongodb</p>
-          </div>
+        <input type='radio' name='stack-name' id='10b' value='10b' />
+        <label htmlFor='10b'>
+          <div id='divname'></div>
         </label>
-        <input type='radio' name='stack-name' id='9' value='9' />
-        <label htmlFor='9'>
-          <div id='divname'>
-            <DiGithubAlt className='iconStyles'/>
-            <p>Github</p>
-          </div>
-        </label>
-        <input type='radio' name='stack-name' id='10' value='10' />
-        <label htmlFor='10'>
-          <div id='divname'>
-            <DiLinux className='iconStyles'/>
-            <p>Linux</p>
-          </div>
-        </label>
-       
-        
+
         <div id='dot'></div>
       </div>
-    </DevExtraStackStyle>
+    </DesExtraStackStyle>
   );
 };
 
-export default DevExtraStack;
+export default DesExtraStack;

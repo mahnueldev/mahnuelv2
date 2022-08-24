@@ -4,7 +4,6 @@ import Dev from '../src/pages/Dev';
 import Des from '../src/pages/Des';
 import TopBar from './components/layouts/TopBar';
 import About from '../src/pages/About';
-import Contact from '../src/pages/Contact';
 
 const Routenav = () => {
   return (
@@ -15,7 +14,7 @@ const Routenav = () => {
           <Route path='/dev' element={<Dev />} />
           <Route path='/des' element={<Des />} />
           <Route path='/about' element={<About />} />
-          <Route path='/contact' element={<Contact />} />
+          
         </Routes>
       
     </Fragment>

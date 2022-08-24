@@ -2,7 +2,6 @@ import React from 'react';
 import Card from '../comp/DesCard';
 import projects from '../data/desprojects';
 import styled from 'styled-components';
-import {AiFillAndroid} from 'react-icons/ai'
 
 const ProjectsStyle = styled.div`
   display: grid;

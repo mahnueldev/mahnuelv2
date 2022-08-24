@@ -75,7 +75,7 @@ numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium'
           </div>
           <br />
           <Link to='/about'>
-          <MainButton type='type' value='About' colorname='blackbtn' icon= {<MdWavingHand /> } />
+          <MainButton value='About' colorname='blackbtn' icon= {<MdWavingHand /> } />
           </Link>
         </div>
         <div className='right-sec'>

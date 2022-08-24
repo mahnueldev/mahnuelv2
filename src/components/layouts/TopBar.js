@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Htext from '../comp/Htext';
 import {Link} from 'react-router-dom'
+import {FcAbout} from 'react-icons/fc'
 
 const TopBarStyle = styled.div`
 display: flex;
@@ -36,11 +37,9 @@ const TopBar = () => {
       <div>
         <ul>
           <Link to='/about'>
-          <li>About</li>
+          <li><FcAbout/></li>
           </Link>
-          <Link to='/contact'>
-          <li>Contact</li>
-          </Link>
+         
         </ul>
       </div>
     </TopBarStyle>

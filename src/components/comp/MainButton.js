@@ -1,25 +1,22 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
 
 const InputButtonStyles = styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
-max-width: 8rem;
-    width: 80%;
-    height: 3rem;
-    border-radius: 2rem;
-    color: #fff;
-    cursor: pointer;
-    :hover{
-  box-shadow: 0 3px 10px var(--black);
-}
-:hover > .animate-icon{
-  transform: rotate(-18deg);
-  transition: 0.2s ease;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 8rem;
+  width: 80%;
+  height: 3rem;
+  border-radius: 2rem;
+  color: #fff;
+  cursor: pointer;
+  :hover > .animate-icon {
+    transform: rotate(-18deg);
+    transition: 0.2s ease;
+  }
 
-.btn {
+  .btn {
     background: inherit;
     color: inherit;
     max-width: inherit;
@@ -31,41 +28,30 @@ max-width: 8rem;
     cursor: inherit;
     text-align: center;
     transition: 0.3s;
-    caret-color: rgba(0,0,0,0);
-    
+    caret-color: rgba(0, 0, 0, 0);
   }
-  .animate-icon{
+  .animate-icon {
     width: 1.5rem;
-margin-right: 1rem;
+    margin-right: 1rem;
   }
 
-
-
-@media only screen and (max-width: 768px) {
-  max-width: 7rem;
+  @media only screen and (max-width: 768px) {
+    max-width: 7rem;
     width: 80%;
     height: 2.7rem;
-  .animate-icon{
-    width: 1.2rem;
-  }
-      
+    .animate-icon {
+      width: 1.2rem;
     }
-`
+  }
+`;
 
-const InputButton = ({value, type, icon , colorname }) => {
+const InputButton = ({ value, type, icon }) => {
   return (
-    <InputButtonStyles id={colorname}>
-    <input
-        className='btn' 
-        value={value}
-        type={type}
-        
-      />
-      <div className='animate-icon' >
-      {icon}
-      </div>
-      </InputButtonStyles>
-  )
-}
+    <InputButtonStyles id='blackbtn'>
+      <input className='btn' value={value} type={type} />
+      <div className='animate-icon'>{icon}</div>
+    </InputButtonStyles>
+  );
+};
 
-export default InputButton
+export default InputButton;

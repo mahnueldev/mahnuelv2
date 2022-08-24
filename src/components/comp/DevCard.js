@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import ReactPlayer from 'react-player';
 import SubButton from './SubButton';
-import {DiReact} from 'react-icons/di'
 
 const CardStyle = styled.div`
   display: flex;

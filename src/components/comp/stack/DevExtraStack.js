@@ -1,18 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import { DiHtml5,DiCss3, DiReact } from 'react-icons/di';
-import { SiJavascript } from 'react-icons/si';
-import { TbBrandReactNative } from 'react-icons/tb';
-import DesExtraStack from './DesExtraStack';
+import { DiNodejsSmall, DiMysql, DiGithubAlt, DiLinux } from 'react-icons/di';
+import { SiMongodb } from 'react-icons/si';
 
-const DesStackStyle = styled.section`
+const DevExtraStackStyle = styled.section`
   width: 29rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  #stack-title {
-    margin-bottom: 1rem;
-    text-align: center;
+  @media only screen and (max-width: 768px) {
+    width: 23rem;
   }
   #stack-slider {
     display: flex;
@@ -57,7 +54,7 @@ const DesStackStyle = styled.section`
     -ms-user-select: none;
     user-select: none;
   }
-  #stack-slider  #divname::before {
+  #stack-slider #divname::before {
     content: '';
     /* position: absolute; */
     /* left: 50%; */
@@ -101,7 +98,8 @@ const DesStackStyle = styled.section`
     width: 8rem;
     opacity: 1;
   }
-  #stack-slider input:checked + label,#divname::after {
+  #stack-slider input:checked + label,
+  #divname::after {
     border-width: 1px;
     transform: scale(1.2);
     transition: 0.5s;
@@ -130,7 +128,7 @@ const DesStackStyle = styled.section`
     top: 50%;
     width: 22px;
     height: 22px;
-    background: var(--brand2);
+    background: var(--brand1);
     border-radius: 50%;
     transition: all 0.15s ease-in-out;
     transform: translate(-50%, -50%);
@@ -154,57 +152,52 @@ const DesStackStyle = styled.section`
     align-items: center;
     width: 2rem;
     margin-left: 2rem;
-    
   }
 `;
-const DesStack = () => {
+const DevExtraStack = () => {
   return (
-    <DesStackStyle>
-      <h1 id='stack-title'>Design Stack</h1>
+    <DevExtraStackStyle>
       <div id='stack-slider'>
-        <input type='radio' name='stack-name' id='1b' value='1b' />
-        <label htmlFor='1b'>
+        <input type='radio' name='stack-name' id='6' value='6' />
+        <label htmlFor='6'>
           <div id='divname'>
-            <DiHtml5 className='iconStyles'/>
-            <p>HTML</p>
+            <DiNodejsSmall className='iconStyles' />
+            <p>NodeJS</p>
           </div>
         </label>
-        <input type='radio' name='stack-name' id='2b' value='2b' />
-        <label htmlFor='2b'>
+        <input type='radio' name='stack-name' id='7' value='7' />
+        <label htmlFor='7'>
           <div id='divname'>
-            <DiCss3 className='iconStyles'/>
-            <p>CSS</p>
+            <DiMysql className='iconStyles' />
+            <p>Mysql</p>
           </div>
         </label>
-        <input type='radio' name='stack-name' id='3b' value='3b' />
-        <label htmlFor='3b'>
+        <input type='radio' name='stack-name' id='8' value='8' />
+        <label htmlFor='8'>
           <div id='divname'>
-            <SiJavascript className='iconStyles'/>
-            <p>Javascript</p>
+            <SiMongodb className='iconStyles' />
+            <p>Mongodb</p>
           </div>
         </label>
-        <input type='radio' name='stack-name' id='4b' value='4b' />
-        <label htmlFor='4b'>
+        <input type='radio' name='stack-name' id='9' value='9' />
+        <label htmlFor='9'>
           <div id='divname'>
-            <DiReact className='iconStyles'/>
-            <p>React</p>
+            <DiGithubAlt className='iconStyles' />
+            <p>Github</p>
           </div>
         </label>
-        <input type='radio' name='stack-name' id='5b' value='5b' />
-        <label htmlFor='5b'>
+        <input type='radio' name='stack-name' id='10' value='10' />
+        <label htmlFor='10'>
           <div id='divname'>
-            <TbBrandReactNative className='iconStyles'/>
-            <p>Native</p>
+            <DiLinux className='iconStyles' />
+            <p>Linux</p>
           </div>
         </label>
-       
-        
+
         <div id='dot'></div>
       </div>
-      <br/><br/> <br/><br/>
-      <DesExtraStack/>
-    </DesStackStyle>
+    </DevExtraStackStyle>
   );
 };
 
-export default DesStack;
+export default DevExtraStack;

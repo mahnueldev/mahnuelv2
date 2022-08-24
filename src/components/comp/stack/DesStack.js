@@ -1,16 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
-import { DiHtml5,DiCss3, DiReact } from 'react-icons/di';
-import { SiJavascript } from 'react-icons/si';
-import { TbBrandReactNative } from 'react-icons/tb';
-import ExtraStack from './DevExtraStack';
+import { SiAdobephotoshop, SiAdobeillustrator, SiAdobeaftereffects, SiAdobexd, SiFigma } from 'react-icons/si';
+import DesExtraStack from './DesExtraStack';
 
-const DevStackStyle = styled.section`
+const DesStackStyle = styled.section`
   width: 29rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 10rem;
+  p{
+    font-size: 14px;
+  }
+  @media only screen and (max-width: 768px) {
+      width: 23rem;
+      p{
+        font-size: 12px;
+      }
+    }
   #stack-title {
     margin-bottom: 1rem;
     text-align: center;
@@ -131,7 +137,7 @@ const DevStackStyle = styled.section`
     top: 50%;
     width: 22px;
     height: 22px;
-    background: var(--brand1);
+    background: var(--brand2);
     border-radius: 50%;
     transition: all 0.15s ease-in-out;
     transform: translate(-50%, -50%);
@@ -158,44 +164,44 @@ const DevStackStyle = styled.section`
     
   }
 `;
-const DevStack = () => {
+const DesStack = () => {
   return (
-    <DevStackStyle>
-      <h1 id='stack-title'>Dev Stack</h1>
+    <DesStackStyle>
+      <h1 id='stack-title'>Design Stack</h1>
       <div id='stack-slider'>
-        <input type='radio' name='stack-name' id='1' value='1' />
-        <label htmlFor='1'>
+        <input type='radio' name='stack-name' id='1b' value='1b' />
+        <label htmlFor='1b'>
           <div id='divname'>
-            <DiHtml5 className='iconStyles'/>
-            <p>HTML</p>
+            <SiAdobephotoshop className='iconStyles'/>
+            <p>Photoshop</p>
           </div>
         </label>
-        <input type='radio' name='stack-name' id='2' value='2' />
-        <label htmlFor='2'>
+        <input type='radio' name='stack-name' id='2b' value='2b' />
+        <label htmlFor='2b'>
           <div id='divname'>
-            <DiCss3 className='iconStyles'/>
-            <p>CSS</p>
+            <SiAdobeillustrator className='iconStyles'/>
+            <p>illustrator</p>
           </div>
         </label>
-        <input type='radio' name='stack-name' id='3' value='3' />
-        <label htmlFor='3'>
+        <input type='radio' name='stack-name' id='3b' value='3b' />
+        <label htmlFor='3b'>
           <div id='divname'>
-            <SiJavascript className='iconStyles'/>
-            <p>Javascript</p>
+            <SiAdobeaftereffects className='iconStyles'/>
+            <p>AfterEffects</p>
           </div>
         </label>
-        <input type='radio' name='stack-name' id='4' value='4' />
-        <label htmlFor='4'>
+        <input type='radio' name='stack-name' id='4b' value='4b' />
+        <label htmlFor='4b'>
           <div id='divname'>
-            <DiReact className='iconStyles'/>
-            <p>React</p>
+            <SiAdobexd className='iconStyles'/>
+            <p>XD</p>
           </div>
         </label>
-        <input type='radio' name='stack-name' id='5' value='5' />
-        <label htmlFor='5'>
+        <input type='radio' name='stack-name' id='5b' value='5b' />
+        <label htmlFor='5b'>
           <div id='divname'>
-            <TbBrandReactNative className='iconStyles'/>
-            <p>Native</p>
+            <SiFigma className='iconStyles'/>
+            <p>Figma</p>
           </div>
         </label>
        
@@ -203,9 +209,9 @@ const DevStack = () => {
         <div id='dot'></div>
       </div>
       <br/><br/> <br/><br/>
-      <ExtraStack/>
-    </DevStackStyle>
+      <DesExtraStack/>
+    </DesStackStyle>
   );
 };
 
-export default DevStack;
+export default DesStack;

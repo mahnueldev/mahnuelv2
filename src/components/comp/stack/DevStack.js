@@ -1,15 +1,29 @@
 import React from 'react';
 import styled from 'styled-components';
-import { DiNodejsSmall,DiMysql, DiGithubAlt, DiLinux } from 'react-icons/di';
-import { SiMongodb } from 'react-icons/si';
+import { DiHtml5,DiCss3, DiReact } from 'react-icons/di';
+import { SiJavascript } from 'react-icons/si';
+import { TbBrandReactNative } from 'react-icons/tb';
+import ExtraStack from './DevExtraStack';
 
-
-const DesExtraStackStyle = styled.section`
+const DevStackStyle = styled.section`
   width: 29rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
- 
+  margin-bottom: 10rem;
+  p{
+    font-size: 14px;
+  }
+  @media only screen and (max-width: 768px) {
+      width: 23rem;
+      p{
+        font-size: 12px;
+      }
+    }
+  #stack-title {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
   #stack-slider {
     display: flex;
     flex-direction: row;
@@ -101,6 +115,7 @@ const DesExtraStackStyle = styled.section`
     border-width: 1px;
     transform: scale(1.2);
     transition: 0.5s;
+    color: var(--gradient);
   }
   #stack-slider input:checked ~ #dot {
     opacity: 1;
@@ -126,7 +141,7 @@ const DesExtraStackStyle = styled.section`
     top: 50%;
     width: 22px;
     height: 22px;
-    background: var(--brand2);
+    background: var(--brand1);
     border-radius: 50%;
     transition: all 0.15s ease-in-out;
     transform: translate(-50%, -50%);
@@ -153,51 +168,54 @@ const DesExtraStackStyle = styled.section`
     
   }
 `;
-const DesExtraStack = () => {
+const DevStack = () => {
   return (
-    <DesExtraStackStyle>
+    <DevStackStyle>
+      <h1 id='stack-title'>Dev Stack</h1>
       <div id='stack-slider'>
-        <input type='radio' name='stack-name' id='6b' value='6b' />
-        <label htmlFor='6b'>
+        <input type='radio' name='stack-name' id='1' value='1' />
+        <label htmlFor='1'>
           <div id='divname'>
-            <DiNodejsSmall className='iconStyles'/>
-            <p>NodeJS</p>
+            <DiHtml5 className='iconStyles'/>
+            <p>HTML</p>
           </div>
         </label>
-        <input type='radio' name='stack-name' id='7b' value='7b' />
-        <label htmlFor='7b'>
+        <input type='radio' name='stack-name' id='2' value='2' />
+        <label htmlFor='2'>
           <div id='divname'>
-            <DiMysql className='iconStyles'/>
-            <p>Mysql</p>
+            <DiCss3 className='iconStyles'/>
+            <p>CSS</p>
           </div>
         </label>
-        <input type='radio' name='stack-name' id='8b' value='8b' />
-        <label htmlFor='8b'>
+        <input type='radio' name='stack-name' id='3' value='3' />
+        <label htmlFor='3'>
           <div id='divname'>
-            <SiMongodb className='iconStyles'/>
-            <p>Mongodb</p>
+            <SiJavascript className='iconStyles'/>
+            <p>Javascript</p>
           </div>
         </label>
-        <input type='radio' name='stack-name' id='9b' value='9b' />
-        <label htmlFor='9b'>
+        <input type='radio' name='stack-name' id='4' value='4' />
+        <label htmlFor='4'>
           <div id='divname'>
-            <DiGithubAlt className='iconStyles'/>
-            <p>Github</p>
+            <DiReact className='iconStyles'/>
+            <p>React</p>
           </div>
         </label>
-        <input type='radio' name='stack-name' id='10b' value='10b' />
-        <label htmlFor='10b'>
+        <input type='radio' name='stack-name' id='5' value='5' />
+        <label htmlFor='5'>
           <div id='divname'>
-            <DiLinux className='iconStyles'/>
-            <p>Linux</p>
+            <TbBrandReactNative className='iconStyles'/>
+            <p>Native</p>
           </div>
         </label>
        
         
         <div id='dot'></div>
       </div>
-    </DesExtraStackStyle>
+      <br/><br/> <br/><br/>
+      <ExtraStack/>
+    </DevStackStyle>
   );
 };
 
-export default DesExtraStack;
+export default DevStack;
