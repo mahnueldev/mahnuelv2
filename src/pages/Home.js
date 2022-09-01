@@ -6,8 +6,10 @@ import styled from 'styled-components';
 import Meetrix from '../images/meetrix.png';
 import Ptext from '../components/comp/Ptext';
 import BottomBar from '../components/layouts/BottomBar';
-import {MdWavingHand} from 'react-icons/md'
-import { Link } from 'react-router-dom';
+import { MdWavingHand } from 'react-icons/md';
+import { useNavigate } from 'react-router-dom';
+// import Theme from '../components/layouts/ThemeSwitch';
+// import Loadmation from '../components/animation/Loadmation';
 
 const HomeStyle = styled.section`
   display: flex;
@@ -42,7 +44,6 @@ const HomeStyle = styled.section`
       margin-left: 1rem;
       margin-top: 5rem;
       padding: 0rem;
-     
     }
 
     img {
@@ -51,14 +52,21 @@ const HomeStyle = styled.section`
     }
     .textpad {
       padding: 1rem 0rem;
+      margin-right: 15rem;
     }
   }
 `;
 
 const Home = () => {
-  
+  const navigate = useNavigate();
+
+  const HandleClick = () => {
+    navigate('/about');
+  };
+
   return (
     <HomeStyle>
+      {/* <Theme/> */}
       <div className='substyle'>
         <div className='left-sec'>
           <Htext text='Hello!' />
@@ -68,15 +76,17 @@ const Home = () => {
           </div>
           <div className='textpad'>
             <Ptext
-              text='Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium'
+              text='I love to design and code.'
             />
           </div>
           <br />
-          <Link to='/about'>
-          <MainButton value='About' colorname='blackbtn' icon= {<MdWavingHand /> } />
-          </Link>
+          <span onClick={HandleClick}>
+            <MainButton
+              value='About'
+              colorname='blackbtn'
+              icon={<MdWavingHand />}
+            />
+          </span>
         </div>
         <div className='right-sec'>
           <img src={Meetrix} alt='' />

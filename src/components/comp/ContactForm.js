@@ -6,7 +6,6 @@ import MainButton from './MainButton';
 import { RiSendPlaneFill } from 'react-icons/ri';
 
 const ContactFormStyle = styled.div`
-  /* Form Style */
   .container {
     display: flex;
     flex-direction: column;
@@ -108,6 +107,7 @@ function ContactForm() {
             name='name'
             placeholder='Your full Name'
             required
+            
           />
           <input className='form-input' type='email' name='email' placeholder='Your Email' required />
           <textarea name='message' rows='7' placeholder='Your Message' required>

@@ -1,12 +1,12 @@
 import * as React from 'react';
-import styled from 'styled-components';
+
 
 
 
 const OrangeFile = () => (
  
     
-  <svg id='file' viewBox="0 0 287.7 287.7" >
+  <svg viewBox="0 0 287.7 287.7" >
   
 
         

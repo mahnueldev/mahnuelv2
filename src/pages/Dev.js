@@ -2,7 +2,6 @@ import React from 'react'
 import BlueFile from '../svg/BlueFile'
 import styled from 'styled-components'
 import Htext from '../components/comp/Htext'
-import Ptext from '../components/comp/Ptext'
 import DevProjects from '../components/layouts/DevProjects'
 
 const DevStyle = styled.section`
@@ -34,6 +33,10 @@ margin-bottom: 8rem;
     padding: 1rem 1rem;
     text-align: left;
   }
+  .ico-sty{
+      width: 2.5rem;
+    }
+  
 }
 
 `
@@ -48,15 +51,7 @@ const Dev = () => {
     <div className='htext-sty'>
     <Htext text='Web & Mobile Development' id='gradient-text'/>
     </div>
-    <Ptext id='dt-sty' text='Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
-obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
-nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
-tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
-quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos 
-sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam'/>
+   
 <DevProjects id='margin-top'/>
     </DevStyle>
   )

@@ -42,7 +42,7 @@ const SubButton = ({ value, type, colorname,href }) => {
   return (
     <SubButtonStyles id={colorname}>
       <a target="blank" href={href}>
-      <input className='btn' value={value} type={type} />
+      <input className='btn' value={value} disabled type={type} />
       </a>
     </SubButtonStyles>
   );

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import CodeBg from '../../images/codebg.png'
 
 const FooterStyle = styled.section`
-margin: 10rem 0;
+margin-bottom: 10rem;
 
 backgroundImg{
     width: 100vw;

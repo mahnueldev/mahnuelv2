@@ -58,11 +58,11 @@ const BottomBarStyle = styled.div`
    */
   .hide-items {
     max-height: 3rem;
-    transition: max-height 1s ease-out;
+    transition: max-height 0.5s ease-out;
   }
   .nav-items {
     max-height: 20rem;
-    transition: max-height 1s ease-in;
+    transition: max-height 0.5s ease-in;
     .arrow-up {
       position: absolute;
       top: 0.5rem;
@@ -92,6 +92,14 @@ const BottomBarStyle = styled.div`
     .ico-sty {
       margin: 8rem 4rem;
     width: 6rem;
+  }
+  .nav-items {
+    .arrow-up {
+    right: 47%;
+  }
+  }
+  .arrow-up {
+    right: 47%;
   }
 }
 `;

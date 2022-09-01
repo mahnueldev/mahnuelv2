@@ -25,7 +25,7 @@ const DesProjects = ({id}) => {
     <ProjectsStyle id={id}>
       {projects.map((project, index) => {
         // eslint-disable-next-line
-        if (index >= 4) return;
+        if (index >= 5) return;
         return (
           <Card key={project.index}
             title={project.name}
@@ -34,7 +34,7 @@ const DesProjects = ({id}) => {
             desc={project.desc}
             link={project.link}
             btnvalue={(project.status=== true ? 'Live' : 'Soon!')}
-            icon
+            stacks={project.stacks }
           
           />
         );

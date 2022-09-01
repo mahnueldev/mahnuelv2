@@ -10,7 +10,7 @@ const GlobalStyles = createGlobalStyle`
   
 :root{
   --brand1: #0F2395; 
-  --brand1-light: #407bff;; 
+  --brand1-light: #407bff; 
   --brand1-blur: rgba(15,35,149,0.3);
   --brand2: #E87A51;
   --brand2-light: #FBBDA7;
@@ -22,9 +22,9 @@ const GlobalStyles = createGlobalStyle`
   --light-grey: #eeeeec;
   --gradient: linear-gradient(90deg, var(--brand1),  var(--brand2));
 
-    
-   
-  }
+}   
+
+  
 html{
     font-size: 16px;
     font-family: 'Montserrat', monospace;

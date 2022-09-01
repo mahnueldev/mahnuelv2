@@ -7,6 +7,9 @@ import {FcAbout} from 'react-icons/fc'
 const TopBarStyle = styled.div`
 display: flex;
 justify-content: space-between;
+position: fixed;
+top: 0rem;
+z-index: 100;
 
 background:var(--dark);
 padding: 1rem;

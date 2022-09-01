@@ -48,7 +48,7 @@ const InputButtonStyles = styled.div`
 const InputButton = ({ value, type, icon }) => {
   return (
     <InputButtonStyles id='blackbtn'>
-      <input className='btn' value={value} type={type} />
+      <input className='btn' value={value} disabled type={type} />
       <div className='animate-icon'>{icon}</div>
     </InputButtonStyles>
   );
