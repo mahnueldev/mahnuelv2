@@ -8,7 +8,7 @@ import Ptext from '../components/comp/Ptext';
 import BottomBar from '../components/layouts/BottomBar';
 import { MdWavingHand } from 'react-icons/md';
 import { useNavigate } from 'react-router-dom';
-// import Theme from '../components/layouts/ThemeSwitch';
+import ThemeSwitch from '../components/layouts/ThemeSwitch';
 // import Loadmation from '../components/animation/Loadmation';
 
 const HomeStyle = styled.section`
@@ -66,7 +66,7 @@ const Home = () => {
 
   return (
     <HomeStyle>
-      {/* <Theme/> */}
+      <ThemeSwitch/>
       <div className='substyle'>
         <div className='left-sec'>
           <Htext text='Hello!' />

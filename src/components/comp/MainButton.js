@@ -9,7 +9,6 @@ const InputButtonStyles = styled.div`
   width: 80%;
   height: 3rem;
   border-radius: 2rem;
-  color: #fff;
   cursor: pointer;
   :hover > .animate-icon {
     transform: rotate(-18deg);
@@ -30,6 +29,10 @@ const InputButtonStyles = styled.div`
     transition: 0.3s;
     caret-color: rgba(0, 0, 0, 0);
   }
+  .btn:focus {
+  outline: none;
+  box-shadow: none;
+}
   .animate-icon {
     width: 1.5rem;
     margin-right: 1rem;

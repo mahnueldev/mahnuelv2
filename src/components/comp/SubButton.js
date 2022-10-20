@@ -26,6 +26,10 @@ const SubButtonStyles = styled.div`
     transition: 0.3s;
     caret-color: rgba(0, 0, 0, 0);
   }
+  .btn:focus {
+  outline: none;
+  box-shadow: none;
+}
 a, a:hover, a:focus, a:active{
   text-decoration: none;
       color: inherit;

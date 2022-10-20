@@ -6,7 +6,7 @@ import { GlobalThemeProvider } from './context/globalthemeContext';
 
 function App() {
   return (
-    // <GlobalThemeProvider>
+    <GlobalThemeProvider>
       <Fragment>
         <BrowserRouter>
           <Routes>
@@ -15,7 +15,7 @@ function App() {
           </Routes>
         </BrowserRouter>
       </Fragment>
-    // </GlobalThemeProvider>
+     </GlobalThemeProvider>
   );
 }
 

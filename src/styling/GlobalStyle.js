@@ -80,6 +80,7 @@ h1 {
   background: var(--dark);
   transition: 0.2s;
   box-shadow: 0 3px 10px var(--dark-blur);
+color: var(--light);
  }
 #bluebtn{
   background: var(--brand1);

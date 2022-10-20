@@ -28,7 +28,7 @@ const DevProjects = ({ id }) => {
     <ProjectsStyle id={id}>
       {projects.map((project, index) => {
         // eslint-disable-next-line
-        if (index >= 4) return;
+        if (index >= 6) return;
         return (
           <Card
             key={project.index}

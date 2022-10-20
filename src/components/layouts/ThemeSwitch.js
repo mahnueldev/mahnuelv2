@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
-// import GlobalThemeContext from '../../context/globalthemeContext';
+import GlobalThemeContext from '../../context/globalthemeContext';
 import { BsFillMoonFill, BsSunFill } from 'react-icons/bs';
 
 const ThemeStyle = styled.section`
@@ -47,7 +47,7 @@ const ThemeStyle = styled.section`
 
   .checkbox:checked + .label .ball {
     transform: translateX(17px);
-    background: hsl(231,82%,15%);
+    background: hsl(231, 82%, 15%);
   }
   .checkbox:checked + .label {
     transition: transform 0.2s linear;
@@ -64,13 +64,20 @@ const ThemeStyle = styled.section`
 `;
 
 const ThemeSwitch = () => {
-//   const globalthemeContext = useContext(GlobalThemeContext);
-//   const {  themeToggler } = globalthemeContext;
+  const globalthemeContext = useContext(GlobalThemeContext);
+  const { theme, setTheme } = globalthemeContext;
+
+  
+
   return (
-    <ThemeStyle
-    //   onChange={() =>themeToggler()}
-    >
-      <input type='checkbox' class='checkbox' id='chk' />
+    <ThemeStyle>
+      <input
+        type='checkbox'
+        class='checkbox'
+        id='chk'
+        isActive={theme === 'dark'}
+        onClick={() => setTheme((p) => (p === 'light' ? 'dark' : 'light'))}
+      />
       <label class='label' htmlFor='chk'>
         <BsFillMoonFill className='moon' />
         <BsSunFill className='sun' />

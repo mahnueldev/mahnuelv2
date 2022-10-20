@@ -4,8 +4,9 @@ import ReactPlayer from 'react-player';
 import SubButton from './SubButton';
 import { AiFillHtml5, AiOutlineInfoCircle } from 'react-icons/ai';
 import { DiReact, DiCssTricks, DiMysql, DiNodejsSmall } from 'react-icons/di';
-import { SiMongodb, SiJavascript, SiFirebase } from 'react-icons/si';
+import { SiMongodb, SiJavascript, SiFirebase, SiNextdotjs } from 'react-icons/si';
 import { TbBrandReactNative } from 'react-icons/tb';
+import { BiServer } from 'react-icons/bi';
 
 const CardStyle = styled.div`
   display: flex;
@@ -48,11 +49,13 @@ const CardMedia = styled.div`
 const CardDescription = styled.div`
   background: var(--light-grey);
   width: inherit;
+  
   .show-desc {
     display: flex;
     flex-direction: column;
     width: inherit;
     padding: 1rem;
+    
   }
   .hide-show-desc {
     display: none;
@@ -83,6 +86,12 @@ const CardDescription = styled.div`
   .react-native:hover {
     color: #1589c8;
   }
+  .server:hover {
+    color: #e83412;
+  }
+  .nextjs:hover {
+    color: #616165;
+  }
   .nodejs:hover {
     color: #62965d;
   }
@@ -105,7 +114,7 @@ const CardInfo = styled.div`
   width: inherit;
   height: 6.5rem;
   border-radius: 0rem 0rem 2rem 2rem;
-  background: var(--light);
+  background: ${({theme})=> theme.bodyColor};
   border: 1px solid var(--grey);
   :hover {
     box-shadow: 0px -35px 30px var(--brand1-blur);
@@ -154,9 +163,11 @@ const icons = {
   'react-native': (
     <TbBrandReactNative className='react-native' id='stack-size' />
   ),
+  server: <BiServer className='server' id='stack-size' />,
+  nextjs: <SiNextdotjs className='nextjs' id='stack-size' />,
   nodejs: <DiNodejsSmall className='nodejs' id='stack-size' />,
   firebase: <SiFirebase className='firebase' id='stack-size' />,
-  mongo: <SiMongodb className='mongodb' id='stack-size' />,
+  mongodb: <SiMongodb className='mongodb' id='stack-size' />,
   sql: <DiMysql className='mysql' id='stack-size' />,
 };
 
@@ -193,7 +204,7 @@ const Card = ({
           className={!showDesc ? 'hide-show-desc' : 'show-desc'}
           tabIndex={0}
         >
-          <div>{desc}</div>
+          <div style={{color: 'var(--dark)'}}>{desc}</div>
           <div id='stack-flex'>
             {stacks.map((stack, index) => icons[stack])}
           </div>

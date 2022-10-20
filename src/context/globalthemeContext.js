@@ -1,38 +1,35 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { darkTheme, lightTheme, GlobalTheme } from '../styling/theme'
+import { darkTheme, lightTheme, GlobalTheme } from '../styling/theme';
 
-const globalthemeContext = createContext();
+const globalthemeContext = createContext(null);
 export default globalthemeContext;
 
 export const GlobalThemeProvider = ({ children }) => {
-    const [theme, setTheme] = localStorage.getItem('theme', 'light');
-    const themeToggler =()=>{
-        theme === "light" ? setTheme("lightTheme") : setTheme("darkTheme");
-        
-    } 
+  const getTheme = () => {
+    return JSON.parse(localStorage.getItem('theme')) || false;
+  };
+  const [theme, setTheme] = useState(getTheme());
+  const themeStyle = theme === 'light' ? lightTheme : darkTheme;
 
-  
-
+  useEffect(() => {
+    localStorage.setItem('theme', JSON.stringify(theme));
+  }, [theme]);
 
   return (
-    <globalthemeContext.Provider value={{theme, setTheme, themeToggler  }}>
-       <ThemeProvider theme = {theme === "light" ? lightTheme : darkTheme}>
-         <GlobalTheme />
-      {children}
+    <globalthemeContext.Provider value={{ theme, setTheme }}>
+      <ThemeProvider theme={themeStyle}>
+        <GlobalTheme />
+
+        {children}
       </ThemeProvider>
     </globalthemeContext.Provider>
   );
 };
 
+// const themeToggler =()=>{
+//     theme === "light" ? setTheme("lightTheme") : setTheme("darkTheme");
+// }
 
-
-   
-    
-    // const themeToggler =()=>{
-    //     theme === "light" ? setTheme("lightTheme") : setTheme("darkTheme");
-    // } 
-  
-    // <globalthemeContext.Provider value={{theme, setTheme ,themeToggler }}>
-    //     <ThemeProvider theme = {theme === "light" ? lightTheme : darkTheme}>
-     
+// <globalthemeContext.Provider value={{theme, setTheme ,themeToggler }}>
+//     <ThemeProvider theme = {theme === "light" ? lightTheme : darkTheme}>

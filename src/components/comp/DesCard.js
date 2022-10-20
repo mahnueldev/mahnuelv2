@@ -96,7 +96,7 @@ const CardInfo = styled.div`
   width: inherit;
   height: 6.5rem;
   border-radius: 0rem 0rem 2rem 2rem;
-  background: var(--white);
+  background: ${({theme})=> theme.bodyColor};
   border: 1px solid var(--grey);
   :hover {
     box-shadow: 0px -35px 30px var(--brand2-blur);
@@ -171,7 +171,7 @@ const DesCard = ({ btnvalue, img, vid, title, link, stacks, desc }) => {
           className={!showDesc ? 'hide-show-desc' : 'show-desc'}
           tabIndex={0}
         >
-          <div>{desc}</div>
+          <div style={{color: 'var(--dark)'}}>{desc}</div>
           <div id='stack-flex'>
             {stacks.map((stack, index) => icons[stack])}
           </div>
