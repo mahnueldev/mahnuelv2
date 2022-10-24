@@ -7,6 +7,7 @@ import { DiReact, DiCssTricks, DiMysql, DiNodejsSmall } from 'react-icons/di';
 import { SiMongodb, SiJavascript, SiFirebase, SiNextdotjs } from 'react-icons/si';
 import { TbBrandReactNative } from 'react-icons/tb';
 import { BiServer } from 'react-icons/bi';
+import { BsWordpress } from 'react-icons/bs';
 
 const CardStyle = styled.div`
   display: flex;
@@ -104,6 +105,9 @@ const CardDescription = styled.div`
   .mysql:hover {
     color: #005c83;
   }
+  .wordpress:hover {
+    color: #1f6f93;
+  }
   /***************************************** */
 `;
 const CardInfo = styled.div`
@@ -169,6 +173,7 @@ const icons = {
   firebase: <SiFirebase className='firebase' id='stack-size' />,
   mongodb: <SiMongodb className='mongodb' id='stack-size' />,
   sql: <DiMysql className='mysql' id='stack-size' />,
+  wordpress: <BsWordpress className='wordpress' id='stack-size' />,
 };
 
 const Card = ({

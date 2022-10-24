@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { SiAdobecreativecloud } from 'react-icons/si';
+import { SiAdobecreativecloud, SiFramer, SiInvision } from 'react-icons/si';
 import { BsBehance } from 'react-icons/bs';
 
 const DesExtraStackStyle = styled.section`
@@ -153,6 +153,11 @@ const DesExtraStackStyle = styled.section`
     width: 2rem;
     margin-left: 2rem;
   }
+  @media only screen and (max-width: 768px) {
+    #divname {
+      margin-left: 1.35rem;
+    }
+  }
 `;
 const DesExtraStack = () => {
   return (
@@ -160,18 +165,24 @@ const DesExtraStack = () => {
       <div id='stack-slider'>
         <input type='radio' name='stack-name' id='6b' value='6b' />
         <label htmlFor='6b'>
-          <div id='divname'></div>
+          <div id='divname'>
+          <SiFramer className='iconStyles' />
+          <p>Framer</p>
+          </div>
         </label>
         <input type='radio' name='stack-name' id='7b' value='7b' />
         <label htmlFor='7b'>
           <div id='divname'>
-            <SiAdobecreativecloud className='iconStyles' />
-            <p>CreativeCloud</p>
+            <SiInvision className='iconStyles' />
+            <p>Invision</p>
           </div>
         </label>
         <input type='radio' name='stack-name' id='8b' value='8b' />
         <label htmlFor='8b'>
-          <div id='divname'></div>
+          <div id='divname'>
+            <SiAdobecreativecloud className='iconStyles' />
+            <p>CreativeCloud</p>
+            </div>
         </label>
         <input type='radio' name='stack-name' id='9b' value='9b' />
         <label htmlFor='9b'>

@@ -5,6 +5,7 @@ export const lightTheme = {
     textColor: "var(--dark)",
     btntextColor: "var(--light)",
     buttonColor: "var(--dark)",
+    ballColor: "#f2a723"
    
 };
 export const darkTheme = {
@@ -12,7 +13,8 @@ export const darkTheme = {
     textColor: "var(--light)",
     btntextColor: "var(--dark)",
     buttonColor: "var(--light)",
-    gradientText: "linear-gradient(90deg, var(--light),  var(--brand2))"
+    gradientText: "linear-gradient(90deg, var(--light),  var(--brand2))",
+    ballColor: "#1a1f42",
 };
 
 export const GlobalTheme = createGlobalStyle`

@@ -7,7 +7,7 @@ export default globalthemeContext;
 
 export const GlobalThemeProvider = ({ children }) => {
   const getTheme = () => {
-    return JSON.parse(localStorage.getItem('theme')) || false;
+    return JSON.parse(localStorage.getItem('theme'))
   };
   const [theme, setTheme] = useState(getTheme());
   const themeStyle = theme === 'light' ? lightTheme : darkTheme;

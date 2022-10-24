@@ -4,6 +4,7 @@ import { DiHtml5,DiCss3, DiReact } from 'react-icons/di';
 import { SiJavascript } from 'react-icons/si';
 import { TbBrandReactNative } from 'react-icons/tb';
 import ExtraStack from './DevExtraStack';
+import ExtraStack2 from './DevExtraStack2';
 
 const DevStackStyle = styled.section`
   width: 29rem;
@@ -219,6 +220,8 @@ const DevStack = () => {
       </div>
       <br/><br/> <br/><br/>
       <ExtraStack/>
+      <br/><br/> <br/><br/>
+      <ExtraStack2/>
     </DevStackStyle>
   );
 };

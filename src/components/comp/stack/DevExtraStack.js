@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { DiNodejsSmall, DiMysql, DiGithubAlt, DiLinux } from 'react-icons/di';
-import { SiMongodb } from 'react-icons/si';
+import { DiNodejsSmall, DiMysql} from 'react-icons/di';
+import { SiMongodb,SiFirebase,SiNextdotjs } from 'react-icons/si';
 
 const DevExtraStackStyle = styled.section`
   width: 29rem;
@@ -183,15 +183,16 @@ const DevExtraStack = () => {
         <input type='radio' name='stack-name' id='9' value='9' />
         <label htmlFor='9'>
           <div id='divname'>
-            <DiGithubAlt className='iconStyles' />
-            <p>Github</p>
+            <SiFirebase className='iconStyles' />
+            <p>Firebase</p>
           </div>
         </label>
+       
         <input type='radio' name='stack-name' id='10' value='10' />
         <label htmlFor='10'>
           <div id='divname'>
-            <DiLinux className='iconStyles' />
-            <p>Linux</p>
+            <SiNextdotjs className='iconStyles' />
+            <p>Nextjs</p>
           </div>
         </label>
 
